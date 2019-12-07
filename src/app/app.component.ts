@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'aq-day2';
+
+  parentHandler() {
+    console.log('Parent handler');
+  }
 }
