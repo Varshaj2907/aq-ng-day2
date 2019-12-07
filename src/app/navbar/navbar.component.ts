@@ -7,7 +7,7 @@ import { DataService } from '../_services/data.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  constructor(public dataService: DataService) {}
+  constructor() {}
 
   ngOnInit() {}
 }

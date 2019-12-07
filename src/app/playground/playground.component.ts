@@ -7,7 +7,7 @@ import { DataService } from '../_services/data.service';
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent implements OnInit {
-  constructor(public dataService: DataService) {}
+  constructor() {}
 
   ngOnInit() {}
 }
