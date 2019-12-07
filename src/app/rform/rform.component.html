@@ -1,0 +1,28 @@
+<form [formGroup]="form" (ngSubmit)="handler()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" formControlName="name" />
+    <p *ngIf="name.touched && name.errors?.required" class="text-danger">
+      Name is required
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="name">State</label>
+    <input type="text" class="form-control" formControlName="state" />
+    <p *ngIf="state.touched && state.errors?.required" class="text-danger">
+      Required Error {{ state.errors | json }}
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="name">City</label>
+    <select name="city" class="form-control" formControlName="city">
+      <option value="Bengaluru">Bengaluru</option>
+      <option value="Chennai">Chennai</option>
+      <option value="Mumbai">Mumbai</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary" type="submit" [disabled]="form.invalid">
+    Submit
+  </button>
+</form>
