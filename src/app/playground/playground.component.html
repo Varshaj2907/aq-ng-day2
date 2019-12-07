@@ -1,8 +1,8 @@
 <h3>Hello there!</h3>
 
-<div [ngSwitch]="lang">
+<ng-container [ngSwitch]="lang">
   <p *ngSwitchCase="'EN'">English</p>
   <p *ngSwitchCase="'FR'">French</p>
   <p *ngSwitchCase="'RU'">Russian</p>
   <p *ngSwitchDefault>Default</p>
-</div>
+</ng-container>
