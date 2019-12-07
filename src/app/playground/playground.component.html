@@ -1,7 +1,7 @@
 <h3>Hello there!</h3>
 
-<ul>
-  <li *ngFor="let city of cities">
-    {{ city }}
-  </li>
-</ul>
+<ng-container *ngFor="let book of books">
+  <ng-container *ngIf="book.inPrint">
+    <h4>{{ book.title }}</h4>
+  </ng-container>
+</ng-container>
