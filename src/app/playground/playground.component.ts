@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent implements OnInit {
-  cities: string[] = ['Bengaluru', 'Chennai', 'Mysuru'];
+  lang = 'HN';
 
   constructor() {}
 

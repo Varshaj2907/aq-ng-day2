@@ -1,7 +1,8 @@
 <h3>Hello there!</h3>
 
-<ul>
-  <li *ngFor="let city of cities">
-    {{ city }}
-  </li>
-</ul>
+<div [ngSwitch]="lang">
+  <p *ngSwitchCase="'EN'">English</p>
+  <p *ngSwitchCase="'FR'">French</p>
+  <p *ngSwitchCase="'RU'">Russian</p>
+  <p *ngSwitchDefault>Default</p>
+</div>
