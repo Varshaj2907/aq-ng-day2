@@ -1,3 +1,8 @@
 <h3>Hello there!</h3>
 
-<p *ngIf="car.registered">{{ car.name }}</p>
+<p *ngIf="car.registered; else block">Registered {{ car.name }}</p>
+<p *ngIf="!car.registered">Unregistered {{ car.name }}</p>
+
+<ng-template #block>
+  <h5>Unregistered: Verbose: {{ car.name }}</h5>
+</ng-template>
