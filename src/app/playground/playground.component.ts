@@ -6,10 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent implements OnInit {
+  cssString = 'font-weight-bold';
+  cssStringArray: string[];
+  cssConfig = {
+    'font-weight-bold': false,
+    'font-italic': false,
+    'text-danger': false
+  };
 
-  constructor() { }
+  alertConfig = {
+    alert: true,
+    'alert-primary': false,
+    'alert-danger': false
+  };
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  handler() {
+    this.alertConfig['alert-danger'] = true;
   }
-
 }

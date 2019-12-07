@@ -1,1 +1,9 @@
 <h3>Hello there!</h3>
+<hr />
+<div role="alert" [ngClass]="alertConfig">
+  A simple primary alert—check it out!
+</div>
+
+<p [class.text-danger]="false">Paragraph is here</p>
+
+<button class="btn btn-primary" (click)="handler()">Change Style</button>
