@@ -2,6 +2,8 @@
 
 <ng-container *ngFor="let book of books">
   <ng-container *ngIf="book.inPrint">
-    <h4>{{ book.title }}</h4>
+    <div class="alert alert-primary" role="alert">
+      {{ book.title }}
+    </div>
   </ng-container>
 </ng-container>
