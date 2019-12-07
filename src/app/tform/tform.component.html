@@ -1,11 +1,33 @@
 <form #f="ngForm" (ngSubmit)="submitHandler(f.value)">
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" class="form-control" name="name" ngModel />
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      ngModel
+      required
+      minlength="5"
+      #name="ngModel"
+    />
+
+    <p *ngIf="name.touched && name.errors?.required" class="text-danger">
+      Name is required
+    </p>
   </div>
   <div class="form-group">
     <label for="name">State</label>
-    <input type="text" class="form-control" name="state" ngModel />
+    <input
+      type="text"
+      class="form-control"
+      name="state"
+      ngModel
+      #state="ngModel"
+      pattern="\d+"
+    />
+    <p *ngIf="state.touched && state.errors?.pattern" class="text-danger">
+      Pattern Error {{ state.errors | json }}
+    </p>
   </div>
   <div class="form-group">
     <label for="name">City</label>
@@ -16,5 +38,7 @@
     </select>
   </div>
 
-  <button class="btn btn-primary" type="submit">Submit</button>
+  <button class="btn btn-primary" type="submit" [disabled]="f.invalid">
+    Submit
+  </button>
 </form>
