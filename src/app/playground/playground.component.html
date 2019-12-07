@@ -1,7 +1,5 @@
 <h3>Hello there!</h3>
 
 <ul>
-  <li *ngFor="let city of cities">
-    {{ city }}
-  </li>
+  <li *ngFor="let city of cities; index as i">{{ i + 1 }}. {{ city }}</li>
 </ul>
